@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>رهف الشمري</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    nav {
+      background-color: #005F73;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 18px;
+      padding: 8px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #0A9396;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+
+    .container h1 {
+      color: #333;
+      text-align: center;
+      font-size: 36px;
+    }
+
+    .services-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .service {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      width: 45%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      opacity: 0;
+      animation: slideIn 1s forwards;
+    }
+
+    .service:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .service h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .service p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    .btn-service {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #005F73;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      cursor: pointer;
+    }
+
+    .btn-service:hover {
+      background-color: #0A9396;
+    }
+
+    /* تأثيرات الرسوم المتحركة */
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* إشعار فوري */
+    .notification {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #0A9396;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 25px;
+      font-size: 18px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      animation: slideInNotification 0.5s forwards;
+    }
+
+    @keyframes slideInNotification {
+      0% { transform: translateX(-50%) translateY(-100px); }
+      100% { transform: translateX(-50%) translateY(0); }
+    }
+
+    /* تصميم متجاوب */
+    @media (max-width: 768px) {
+      .service {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- إشعار فوري -->
+<div class="notification">
+  مرحبًا بك في موقعنا الإلكتروني الجديد!
+</div>
+
+<!-- شريط التنقل -->
+<nav>
+  <a href="#">الرئيسية</a>
+  <a href="#">الخدمات</a>
+  <a href="#">التسجيل</a>
+  <a href="#">تواصل معنا</a>
+</nav>
+
+<!-- محتوى الخدمات -->
+<div class="container">
+  <h1>الخدمات الإلكترونية</h1>
+
+  <div class="services-container">
+    <!-- خدمة 1 -->
+    <div class="service">
+      <i class="fas fa-check-circle fa-2x" style="color: #005F73;"></i>
+      <h3>التحقق من الهوية</h3>
+      <p>يمكنك التحقق من الهوية عبر نظام الخدمات الإلكترونية بسهولة.</p>
+      <a href="#" class="btn-service">ابدأ الآن</a>
+    </div>
+
+    <!-- خدمة 2 -->
+    <div class="service">
+      <i class="fas fa-calendar-alt fa-2x" style="color: #005F73;"></i>
+      <h3>حجز المواعيد</h3>
+      <p>احجز مواعيدك للأطباء أو المواعيد الحكومية بسهولة.</p>
+      <a href="#" class="btn-service">ابدأ الآن</a>
+    </div>
+
+    <!-- خدمة 3 -->
+    <div class="service">
+<i class="fas fa-file-invoice fa-2x" style="color: #005F73;"></i>
+      <h3>دفع الفواتير</h3>
+      <p>دفع فواتير الخدمات بسهولة وسرعة عبر منصتنا الإلكترونية.</p>
+      <a href="#" class="btn-service">ابدأ الآن</a>
+    </div>
+
+    <!-- خدمة 4 -->
+    <div class="service">
+      <i class="fas fa-users fa-2x" style="color: #005F73;"></i>
+      <h3>التسجيل في الدورات</h3>
+      <p>سجل الآن في الدورات التعليمية المتاحة عبر الإنترنت.</p>
+      <a href="#" class="btn-service">ابدأ الآن</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+<!-- نافذة منبثقة للتحقق من الهوية -->
+<div class="popup" id="verifyIdentityPopup">
+  <div class="popup-content">
+    <h2>التحقق من الهوية</h2>
+    <form>
+      <label for="idNumber">رقم الهوية:</label>
+      <input type="text" id="idNumber" name="idNumber" required>
+      <br><br>
+      <button type="submit" class="btn-service">تحقق</button>
+    </form>
+    <button onclick="closePopup()" class="btn-service">إغلاق</button>
+  </div>
+</div>
+
+
+<!-- صفحة حجز المواعيد -->
+<div class="appointment-booking">
+  <h2>حجز المواعيد</h2>
+  <label for="date">اختر التاريخ:</label>
+  <input type="date" id="date" name="date" required>
+  <label for="time">اختر الوقت:</label>
+  <input type="time" id="time" name="time" required>
+  <button type="submit" class="btn-service">حجز الموعد</button>
+</div>
+
+<!-- قائمة الفواتير -->
+<div class="bill-payment">
+  <h2>دفع الفواتير</h2>
+  <ul>
+    <li>فاتورة الماء: 100 ريال - <button class="btn-service">دفع الآن</button></li>
+    <li>فاتورة الكهرباء: 150 ريال - <button class="btn-service">دفع الآن</button></li>
+  </ul>
+</div>
+// فتح النافذة المنبثقة
+function openPopup() {
+  document.getElementById("verifyIdentityPopup").style.display = "block";
+}
+
